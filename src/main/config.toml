@@ -1,0 +1,23 @@
+[root]
+title = 'I am root'
+description = 'Ready to Start?'
+default = 'yes'
+[root.option.yes]
+name = 'Yes'
+goto = 'Q-A'
+[root.option.no]
+name = 'No'
+goto = '%%shutdown%%'
+
+[Q-A]
+title = 'I am Q-A'
+description = 'the first question. what is your gender'
+[Q-A.option.male]
+name = 'Male'
+goto = '%%end%%'
+[Q-A.option.female]
+name = 'Female'
+goto = '%%end%%'
+[Q-A.option.non-binary]
+name = 'Non-binary'
+goto = '%%end%%'
